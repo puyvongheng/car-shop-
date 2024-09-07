@@ -1,0 +1,100 @@
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    color: #ecf0f1;
+    padding-top: 20px;
+
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 10px 20px;
+    background-color: #34495e;
+    text-align: center;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #ecf0f1;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin: 0;
+    position: relative; /* Required for the hover effect */
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.sidebar-menu a i {
+    margin-right: 15px;
+    font-size: 18px;
+    color: #bdc3c7;
+}
+
+.sidebar-menu a:hover {
+    background-color: #89898974;
+    color: #ffffff;
+}
+
+.sidebar-menu a.active {
+    background-color: cornflowerblue;
+    margin: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.sidebar-menu a.active i {
+    color: #ffffff;
+}
+
+/* Sub-menu Styles */
+.sidebar-submenu {
+    list-style: none;
+    padding-left: 20px; /* Indent sub-menu items */
+    display: none; /* Hide sub-menu by default */
+    position: absolute; /* Position sub-menu relative to parent */
+    top: 0;
+    left: 250px; /* Align with the right edge of the parent menu */
+    background-color: #000000; /* Sub-menu background color */
+    width: 200px; /* Width of the sub-menu */
+
+    border-radius: 1px 10px 10px 1px;
+    padding: 5px;
+    transition: 10s;
+    
+ 
+}
+
+.sidebar-menu li:hover .sidebar-submenu {
+    display: block; /* Show sub-menu on hover */
+}
+
+.sidebar-submenu a {
+    padding: 10px 20px;
+    font-size: 14px; /* Smaller font size for sub-menu items */
+    border-radius: 10px;
+}
+
+.sidebar-submenu a:hover {
+    background-color: #16a085;
+}
